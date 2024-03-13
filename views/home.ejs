@@ -1,0 +1,23 @@
+
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+   <h1><center>Responses</h1>
+     <form class="frm" action= "/abc" method="post">
+       <input type="text" name="sear" placeholder="Name">
+       <button type="submit" name="sea">Search</button>
+     </form>
+
+    <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 150) + " ..."%>
+    <a href="/posts/<%=post.title%>">Read More</a>
+    </p>
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
