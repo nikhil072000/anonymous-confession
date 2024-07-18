@@ -28,8 +28,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-nikhil:test123@cluster0.y481n.mongodb.net/blogDB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.set('useCreateIndex', true);
+mongoose.connect("mongodb+srv://admin-nikhil:test123@cluster0.y481n.mongodb.net/blogDB?retryWrites=true&w=majority");
+// mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
   email: String,
